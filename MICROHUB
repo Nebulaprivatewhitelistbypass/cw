@@ -14,7 +14,7 @@ end)
 
 for i,v in pairs(game.Players:GetPlayers()) do
 if v.Name == "YMikeOfficialYT" then
-  
+  print(v.Name)
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local yes = v.Name
@@ -75,7 +75,6 @@ end
 end
 if v.Name == "random4390589345" then
     print(v.Name)
-    MainSection:NewLabel("An owner of micro hub is here!")
     
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
