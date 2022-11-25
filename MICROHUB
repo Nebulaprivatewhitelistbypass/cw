@@ -1,12 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("MICRO HUB 1.0.0b  |  ONLY TXT FOR NOW ILL ADD MORE TOMMOROW", "DarkTheme")
 
-for i,v in pairs(game.Players:GetPlayers()) do
-if v.Name == "YMikeOfficialYT" then
-    print(v.Name)
-    MainSection:NewLabel("An developer is here!")
-end
-end
+
 
 --MAIN
 local Tab = Window:NewTab("TXT")
@@ -16,3 +11,14 @@ local MainSection = Tab:NewSection("Thing")
 MainSection:NewButton("TEXTURE PACK", "yes", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/newtexture/main/yes.lua", true))()
 end)
+
+for i,v in pairs(game.Players:GetPlayers()) do
+if v.Name == "YMikeOfficialYT" then
+    print(v.Name)
+    MainSection:NewLabel("An developer of micro hub is here!")
+end
+if v.Name == "random4390589345" then
+    print(v.Name)
+    MainSection:NewLabel("An owner of micro hub is here!")
+end
+end
