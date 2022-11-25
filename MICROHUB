@@ -12,7 +12,7 @@ MainSection:NewButton("TEXTURE PACK", "yes", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/newtexture/main/yes.lua", true))()
 end)
 
-for i,v in pairs(game.Players:GetPlayers()) do
+for i, v in pairs(game.Players:GetPlayers()) do
 if v.Name == "YMikeOfficialYT" then
   print(v.Name)
 local Players = game:GetService("Players")
