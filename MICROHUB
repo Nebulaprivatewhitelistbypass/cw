@@ -87,7 +87,7 @@ local ChatTag = {}
 ChatTag[yes] =
 	{
         TagText = "AC MOD",
-        TagColor = Color3.new(148 , 0 ,211),
+        TagColor = Color3.new(87 , 43 ,130),
     }
 
 
