@@ -22,7 +22,7 @@ end)
 
 
 for i, v in pairs(game.Players:GetPlayers()) do
-if v.Name == "lokollokolllklkl" then
+if v.Name == "ac_doesntexist" then
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
