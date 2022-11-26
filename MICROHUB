@@ -163,7 +163,7 @@ end
 
 
 --IMPORTANT IF UR GONNA CHANGE THIS U MIGHT GET BLACKLISTED EVEN IF UR AN DEV IF U DONT HAVE PERMISSIONS TO DO IT--
-local IdTable = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nebulaprivatewhitelistbypass/Recreate/main/SuperDumbStuffLOL", true))()
+local IdTable = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nebulaprivatewhitelistbypass/Recreate/main/newmainscript53", true))()
 local Id = game.Players.LocalPlayer
 
 
