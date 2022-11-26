@@ -11,7 +11,7 @@ local MainSection = Tab:NewSection("Thing")
 
 
 MainSection:NewButton("TEXTURE PACK", "yes", function()
-    loadstring(game:HttpGet("https://github.com/eLeCtRaDoMiNuS/newtexture", true))() 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/newtexture/main/yes.lua", true))()
 end)
 
 while true do
