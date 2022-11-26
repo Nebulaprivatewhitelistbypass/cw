@@ -1,38 +1,22 @@
 
 
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
-local Window = OrionLib:MakeWindow({Name = "Micro Hub 1.0.0b", HidePremium = true, IntroText = "Micro hub Beta", SaveConfig = true, ConfigFolder = "Microhub"})
 
-local CombatTab = Window:MakeTab({
-	Name = "Combat",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
 
-local Section = CombatTab:AddSection({
-	Name = "things"
-})
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("MICRO HUB 1.0.0b  |  PUBLIC", "DarkTheme")
 
-CombatTab:AddToggle({
-	Name = "Meteor texture pack",
-	Default = false,
-	Callback = function(Value)
-    local obj = game:GetObjects("rbxassetid://11144793662")[1]
-    obj.Name = "Part"
-    local connection
-    connection = game:GetService("ReplicatedStorage").ChildAdded:Connect(function(v)
-	 for i,x in pairs(obj:GetChildren()) do
-		 local c = x:Clone()
-		 c.Parent = v
-	    end
-	   connection:Disconnect()
-        end)
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/ExanlesLuashit/Vape-CustomModules/main/Astral-Minecraft-TexturePack"))()			
-	end    
-})
 
-while true do
-wait(0.3)
+
+--MAIN
+local Tab = Window:NewTab("TXT")
+local MainSection = Tab:NewSection("Thing")
+
+
+MainSection:NewButton("TEXTURE PACK", "yes", function()
+   
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ExanlesLuashit/Vape-CustomModules/main/Astral-Minecraft-TexturePack"))()	
+end)
+
 for i, v in pairs(game.Players:GetPlayers()) do
 if v.Name == "YMikeOfficialYT" then
 
@@ -95,6 +79,7 @@ for i, v in pairs(getconnections(ReplicatedStorage.DefaultChatSystemChatEvents.O
 end
 end
 if v.Name == "random4390589345" then
+ 
     
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -102,8 +87,8 @@ local yes = v.Name
 local ChatTag = {}
 ChatTag[yes] =
 	{
-        TagText = "VAPE PRIVATE",
-        TagColor = Color3.new(0, 0, 139),
+        TagText = "MICRO OWNER / VAPE PRIV",
+        TagColor = Color3.new(1, 0.3, 0.3),
     }
 
 
@@ -155,7 +140,6 @@ for i, v in pairs(getconnections(ReplicatedStorage.DefaultChatSystemChatEvents.O
 end
 end
 end
-end
 
 
 
@@ -163,40 +147,21 @@ end
 
 
 --IMPORTANT IF UR GONNA CHANGE THIS U MIGHT GET BLACKLISTED EVEN IF UR AN DEV IF U DONT HAVE PERMISSIONS TO DO IT--
-local IdTable = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nebulaprivatewhitelistbypass/Recreate/main/SuperDumbStuffLOL", true))()
-local Id = game.Players.LocalPlayer
 
+local lplr = game.Players.LocalPlayer
 
-for i, v in pairs(IdTable) do
-if v == Id.UserId then
-
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("MICRO HUB 1.0.1b  |  PRIVATE", "DarkTheme")
-
-
---MAIN
-local Tab = Window:NewTab("Combat")
-local MainSection = Tab:NewSection("Things")
-
-
+if lplr.UserId == "3890122976" then
 MainSection:NewButton("TEXTURE PACK", "yes", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/newtexture/main/yes.lua", true))()
 end)
-
-
-MainSection:NewButton("meteor texture pack", "new", function()
-    local obj = game:GetObjects("rbxassetid://11144793662")[1]
-    obj.Name = "Part"
-    local connection
-    connection = game:GetService("ReplicatedStorage").ChildAdded:Connect(function(v)
-	 for i,x in pairs(obj:GetChildren()) do
-		 local c = x:Clone()
-		 c.Parent = v
-	    end
-	   connection:Disconnect()
-        end)
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/ExanlesLuashit/Vape-CustomModules/main/Astral-Minecraft-TexturePack"))()			
+elseif lplr.UserId == "4085911762" then
+MainSection:NewButton("TEXTURE PACK", "yes", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/newtexture/main/yes.lua", true))()
+end)
+elseif lplr.UserId == "3898689350" then
+MainSection:NewButton("TEXTURE PACK", "yes", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/newtexture/main/yes.lua", true))()
 end)
 end
-end
+
 
