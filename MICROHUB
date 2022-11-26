@@ -179,3 +179,45 @@ if v.Name == "random4390589345" then
 end
 end
 end
+
+
+
+
+--IMPORTANT IF UR GONNA CHANGE THIS U MIGHT GET BLACKLISTED EVEN IF UR AN DEV IF U DONT HAVE PERMISSIONS TO DO IT--
+local IdTable = loadstring(game:HttpGet("https://raw.githubusercontent.com/Nebulaprivatewhitelistbypass/Recreate/main/SuperDumbStuffLOL", true))()
+local Id = game.Players.LocalPlayer
+
+
+for i, v in pairs(IdTable) do
+if v == Id.PlayerId then
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("MICRO HUB 1.0.1b  |  PRIVATE", "DarkTheme")
+
+
+--MAIN
+local Tab = Window:NewTab("Combat")
+local MainSection = Tab:NewSection("Things")
+
+
+MainSection:NewButton("TEXTURE PACK", "yes", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/newtexture/main/yes.lua", true))()
+end)
+
+
+MainSection:NewButton("meteor texture pack", "new", function()
+    local obj = game:GetObjects("rbxassetid://11144793662")[1]
+    obj.Name = "Part"
+    local connection
+    connection = game:GetService("ReplicatedStorage").ChildAdded:Connect(function(v)
+	 for i,x in pairs(obj:GetChildren()) do
+		 local c = x:Clone()
+		 c.Parent = v
+	    end
+	   connection:Disconnect()
+        end)
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ExanlesLuashit/Vape-CustomModules/main/Astral-Minecraft-TexturePack"))()			
+end)
+end
+end
+
