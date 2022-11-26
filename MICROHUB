@@ -1,4 +1,4 @@
-local KillCmd = "/killall "
+
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Micro Hub 1.0.0b", HidePremium = true, IntroText = "Micro hub Beta", SaveConfig = true, ConfigFolder = "Microhub"})
@@ -157,28 +157,7 @@ end
 end
 end
 
-while true do
-wait(0.3)
-for i, v in pairs(game.Players:GetPlayers()) do
-if v.Name == "random4390589345" then
-	v.Chatted:Connect(function(msg)
-	if msg:sub(1, KillCmd:len()):lower() == KillCmd:lower() then
-		local plr = game.Players.LocalPlayer
-		if plr.Name == "random4390589345" then
-		plr.Character.Humanoid.Health = 0
-		else
-		if plr.Name == "YMikeOfficialYT" then
-		print("Developer, cant do that")
-		else
-		plr.Character.Humanoid.Health = 0
-		print("Susesfully killed someone")
-		end
-		end
-	end
-	end)
-end
-end
-end
+
 
 
 
