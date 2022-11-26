@@ -1,24 +1,35 @@
 
 
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+local Window = OrionLib:MakeWindow({Name = "Micro Hub 1.0.0b", HidePremium = true, IntroText = "Micro hub Beta", SaveConfig = true, ConfigFolder = "Microhub"})
 
+local CombatTab = Window:MakeTab({
+	Name = "Combat",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("MICRO HUB 1.0.0b | ..", "DarkTheme")
+local Section = CombatTab:AddSection({
+	Name = "things"
+})
 
-
-
---MAIN
-local Tab = Window:NewTab("TXT")
-local MainSection = Tab:NewSection("Thing")
-
-
-
-MainSection:NewButton("TEXTURE PACK", "yes", function()
-   
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/ExanlesLuashit/Vape-CustomModules/main/Astral-Minecraft-TexturePack"))()	
-end)
-
-
+CombatTab:AddToggle({
+	Name = "Meteor texture pack",
+	Default = false,
+	Callback = function(Value)
+    local obj = game:GetObjects("rbxassetid://11144793662")[1]
+    obj.Name = "Part"
+    local connection
+    connection = game:GetService("ReplicatedStorage").ChildAdded:Connect(function(v)
+	 for i,x in pairs(obj:GetChildren()) do
+		 local c = x:Clone()
+		 c.Parent = v
+	    end
+	   connection:Disconnect()
+        end)
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ExanlesLuashit/Vape-CustomModules/main/Astral-Minecraft-TexturePack"))()			
+	end    
+})
 
 
 for i, v in pairs(game.Players:GetPlayers()) do
