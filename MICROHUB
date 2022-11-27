@@ -14,7 +14,7 @@ local Section = CombatTab:AddSection({
 })
 
 CombatTab:AddToggle({
-	Name = "Meteor texture pack",
+	Name = "MeteorTexture",
 	Default = false,
 	Callback = function(Value)
     local obj = game:GetObjects("rbxassetid://11144793662")[1]
