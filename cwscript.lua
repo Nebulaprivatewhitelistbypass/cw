@@ -22,7 +22,7 @@ Tab:AddToggle({
 	Name = "Autopary (also idk if untoggable)"
 	Default = false,
 	Callback = function(Value)
-		https://raw.githubusercontent.com/Nebulaprivatewhitelistbypass/cw/main/AUTO%20PARRY
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Nebulaprivatewhitelistbypass/cw/main/AUTO%20PARRY"))()
 	end    
 })
 
